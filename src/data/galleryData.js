@@ -3,48 +3,63 @@ export const galleryData = [
         id: 1,
         category: "certificates",
         title: "Google Digital Marketing Certification",
-        image: "[Certificate 1]"
+        image: "[Certificate 1]",
+        date: 'Month Year',
     },
     {
         id: 2,
         category: "certificates",
         title: "Chancellor's Academic Merit Award",
-        image: "[Certificate 2]"
+        image: "[Certificate 2]",
+        date: 'Month Year',
     },
     {
         id: 3,
         category: "presentations",
         title: "AIESEC Public Speaking Competition",
-        image: "[Presentation 1]"
+        image: "[Presentation 1]",
+        date: 'Month Year',
     },
     {
         id: 4,
         category: "presentations",
         title: "AtkinsRéalis Hackafuture",
-        image: "[Presentation 2]"
+        image: "[Presentation 2]",
+        date: 'Month Year',
     },
     {
         id: 5,
         category: "volunteering",
         title: "Teaching at The Blue Coat School",
-        image: "[Volunteering 1]"
+        image: "[Volunteering 1]",
+        date: 'Month Year',
     },
     {
         id: 6,
         category: "volunteering",
         title: "Breast Cancer Awareness Month",
-        image: "[Volunteering 2]"
+        image: "[Volunteering 2]",
+        date: 'Month Year',
     },
     {
         id: 7,
         category: "events",
         title: "University Welcome Week",
-        image: "[Event 1]"
+        image: "[Event 1]",
+        date: 'Month Year',
     },
     {
         id: 8,
         category: "events",
         title: "Computer Science Student Events",
-        image: "[Event 2]"
-    }
+        image: "[Event 2]",
+        date: 'Month Year',
+    },
+    {
+        id: 9,
+        category: "events",
+        title: "Random Student Event",
+        image: "[Event 3]",
+        date: 'Month Year',
+    },
 ];

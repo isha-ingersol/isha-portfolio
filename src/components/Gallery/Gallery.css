@@ -106,6 +106,42 @@
     text-align: center;
 }
 
+/* Show More Button - same style as Projects */
+.gallery-show-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.gallery-show-more-btn {
+    padding: 14px 32px;
+    background: rgba(196, 196, 196, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    color: var(--color-text-dark);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gallery-show-more-btn:hover {
+    background: rgba(81, 81, 81, 0.08);
+    transform: translateY(-2px);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+
+.gallery-show-more-btn.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+
 @media (max-width: 734px) {
     .gallery-grid {
         grid-template-columns: 1fr;
