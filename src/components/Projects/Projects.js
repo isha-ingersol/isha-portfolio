@@ -23,14 +23,18 @@ const Projects = () => {
         setIsExpanded(false);
     };
 
+    const [scrollPosition, setScrollPosition] = useState(0);
     const toggleExpanded = () => {
-        setIsExpanded(!isExpanded);
-
-        // Scroll only when collapsing
-        if (isExpanded) { // i.e., we are about to collapse
-            document.getElementById('projects').scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
+        if (!isExpanded) {
+            // Saving scroll position before expanding
+            setScrollPosition(window.scrollY);
+            setIsExpanded(true);
+        } else {
+            // Collapsing, restore scroll
+            setIsExpanded(false);
+            window.scrollTo({
+                top: scrollPosition,
+                behavior: 'smooth'
             });
         }
     };
