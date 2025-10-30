@@ -55,6 +55,7 @@ const Gallery = () => {
                 {visibleGallery.map(item => (
                     <div key={item.id} className="gallery-item">
                         <div className="gallery-image">{item.image}</div>
+                        {item.date && <div className="gallery-date">{item.date}</div>}
                         <p className="gallery-caption">{item.title}</p>
                     </div>
                 ))}
