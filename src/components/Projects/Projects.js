@@ -25,8 +25,13 @@ const Projects = () => {
 
     const toggleExpanded = () => {
         setIsExpanded(!isExpanded);
-        if (!isExpanded) {
-            document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+        // Scroll only when collapsing
+        if (isExpanded) { // i.e., we are about to collapse
+            document.getElementById('projects').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
         }
     };
 
