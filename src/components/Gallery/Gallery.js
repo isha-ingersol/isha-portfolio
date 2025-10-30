@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { galleryData } from '../../data/galleryData';
 import './Gallery.css';
 
@@ -7,14 +7,30 @@ const Gallery = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [filteredGallery, setFilteredGallery] = useState([]);
     const [scrollPosition, setScrollPosition] = useState(0);
+    const gridRef = useRef(null);
 
     useEffect(() => {
         const filtered = activeCategory === 'all'
             ? galleryData
             : galleryData.filter(item => item.category === activeCategory);
         setFilteredGallery(filtered);
-        setIsExpanded(false); // collapse when category changes
+        setIsExpanded(false);
     }, [activeCategory]);
+
+    useEffect(() => {
+        if (!gridRef.current) return;
+
+        const cards = Array.from(gridRef.current.children);
+        let maxHeight = 0;
+        cards.forEach(card => {
+            card.style.height = 'auto'; // reset
+            const h = card.offsetHeight;
+            if (h > maxHeight) maxHeight = h;
+        });
+        cards.forEach(card => {
+            card.style.height = `${maxHeight}px`;
+        });
+    }, [filteredGallery, isExpanded]);
 
     const visibleGallery = isExpanded ? filteredGallery : filteredGallery.slice(0, 8);
     const showMoreButton = filteredGallery.length > 8;
@@ -51,7 +67,7 @@ const Gallery = () => {
                     </button>
                 ))}
             </div>
-            <div className="gallery-grid">
+            <div className="gallery-grid" ref={gridRef}>
                 {visibleGallery.map(item => (
                     <div key={item.id} className="gallery-item">
                         <div className="gallery-image">{item.image}</div>
@@ -61,7 +77,6 @@ const Gallery = () => {
                 ))}
             </div>
 
-            {/* Show More/Less Button */}
             {showMoreButton && (
                 <div className="gallery-show-more-container">
                     <button 
