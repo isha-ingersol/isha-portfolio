@@ -1,0 +1,64 @@
+.brands-section {
+    background: var(--color-bg-gray);
+    padding: var(--spacing-2xl) 20px;
+    overflow: hidden;
+}
+
+.brands-header {
+    max-width: 980px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.brands-header h2 {
+    font-size: var(--font-headline);
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.brands-header p {
+    font-size: var(--font-body-large);
+    color: var(--color-text-gray);
+}
+
+.brands-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-lg) 0;
+}
+
+.brands-track {
+    display: flex;
+    gap: 80px;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.brands-track:hover {
+    animation-play-state: paused;
+}
+
+.brand-logo {
+    flex-shrink: 0;
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-placeholder {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    opacity: 0.4;
+    transition: opacity var(--transition-fast);
+    text-align: center;
+}
+
+.brand-logo:hover .logo-placeholder {
+    opacity: 0.8;
+}

@@ -1,0 +1,14 @@
+.awards-list {
+    max-width: 700px;
+    margin: var(--spacing-lg) auto;
+    text-align: left;
+}
+
+.award-item {
+    font-size: var(--font-body-large);
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+    color: var(--color-text-dark);
+    margin-bottom: var(--spacing-sm);
+}

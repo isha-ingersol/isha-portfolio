@@ -1,0 +1,51 @@
+.parallax-section {
+    min-height: 100vh;
+    background: var(--gradient-purple);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    text-align: center;
+    position: relative;
+}
+
+.parallax-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.parallax-content {
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.parallax-content h2 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: -0.015em;
+}
+
+.testimonial-quote {
+    font-size: var(--font-subheadline);
+    line-height: 1.14286;
+    color: var(--color-text-light);
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+.testimonial-author {
+    margin-top: 20px;
+    font-size: var(--font-body);
+    opacity: 0.9;
+}

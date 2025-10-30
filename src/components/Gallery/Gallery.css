@@ -1,0 +1,107 @@
+.gallery-section {
+    background: var(--color-bg-light);
+    padding: var(--spacing-3xl) 20px;
+}
+
+.gallery-header {
+    max-width: 980px;
+    margin: 0 auto var(--spacing-xl);
+    text-align: center;
+}
+
+.gallery-header h2 {
+    font-size: var(--font-headline);
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+}
+
+.gallery-header p {
+    font-size: var(--font-body-large);
+    color: var(--color-text-gray);
+}
+
+.gallery-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.gallery-tab {
+    padding: 12px 28px;
+    background: transparent;
+    border: 1px solid #d2d2d7;
+    border-radius: var(--radius-lg);
+    font-size: var(--font-body-small);
+    font-weight: 500;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.gallery-tab:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.gallery-tab.active {
+    background: var(--color-text-dark);
+    color: var(--color-white);
+    border-color: var(--color-text-dark);
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--color-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-fast), opacity var(--transition-fast);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 280px;
+    background: var(--gradient-purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+}
+
+.gallery-item:nth-child(2n) .gallery-image {
+    background: var(--gradient-pink);
+}
+
+.gallery-item:nth-child(3n) .gallery-image {
+    background: var(--gradient-blue);
+}
+
+.gallery-item:nth-child(4n) .gallery-image {
+    background: var(--gradient-green);
+}
+
+.gallery-caption {
+    padding: 20px;
+    font-size: var(--font-body-small);
+    font-weight: 500;
+    color: var(--color-text-dark);
+    text-align: center;
+}

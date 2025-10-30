@@ -1,0 +1,73 @@
+:root {
+    --nav-height: 44px;
+    
+    /* Colors */
+    --color-primary: #2997ff;
+    --color-primary-hover: #147ce5;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-text-dark: #1d1d1f;
+    --color-text-light: #f5f5f7;
+    --color-text-gray: #86868b;
+    --color-text-light-gray: #a1a1a6;
+    --color-bg-light: #fbfbfd;
+    --color-bg-gray: #f5f5f7;
+    --color-accent-orange: #f56300;
+    --color-accent-orange-dark: #bf4800;
+    
+    /* Gradients */
+    --gradient-purple: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-pink: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-blue: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-green: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --gradient-orange: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --gradient-mint: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    
+    /* Typography */
+    --font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    
+    /* Font Sizes */
+    --font-hero: 80px;
+    --font-headline: 56px;
+    --font-subheadline: 28px;
+    --font-body-large: 21px;
+    --font-body: 17px;
+    --font-body-small: 15px;
+    --font-caption: 12px;
+    
+    /* Spacing */
+    --spacing-xs: 8px;
+    --spacing-sm: 16px;
+    --spacing-md: 24px;
+    --spacing-lg: 40px;
+    --spacing-xl: 60px;
+    --spacing-2xl: 100px;
+    --spacing-3xl: 120px;
+    
+    /* Border Radius */
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 25px;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-medium: 0.6s ease;
+    --transition-slow: 1s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+    background: var(--color-white);
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
