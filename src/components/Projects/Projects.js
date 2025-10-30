@@ -80,12 +80,24 @@ const Projects = () => {
                                 {project.category.replace('-', '/').toUpperCase()}
                             </span>
                             <h3>{project.title}</h3>
+                            {project.date && <span className="project-date">{project.date}</span>}
                             <p>{project.description}</p>
                             <div className="project-tags">
                                 {project.tags.map((tag, idx) => (
                                     <span key={idx} className="project-tag">{tag}</span>
                                 ))}
                             </div>
+
+                            {project.link && (
+                                <a 
+                                    href={project.link} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="view-project-btn"
+                                >
+                                    View Project
+                                </a>
+                            )}
                         </div>
                     ))}
                 </div>

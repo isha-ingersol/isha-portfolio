@@ -211,6 +211,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: center; /* centre the tags */
+    margin-top: 10px;
 }
 
 .project-tag {
@@ -255,6 +257,36 @@
 
 .show-more-btn.expanded .toggle-icon {
     transform: rotate(180deg);
+}
+
+/* Project Date - subtle, light text */
+.project-date {
+    font-size: 13px;
+    font-weight: 500;
+    color: #86868b; /* matches other secondary text */
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* View Project Button - minimal Apple-style */
+.view-project-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2997ff; /* matches project category accent */
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.view-project-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 /* Responsive */

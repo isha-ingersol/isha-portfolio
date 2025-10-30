@@ -6,7 +6,8 @@ export const projectsData = [
         description: "Improved localization accuracy in traditional SLAM models using Gated Recurrent Unit (GRU) networks in MATLAB.",
         icon: "🤖",
         tags: ["MATLAB", "GRU", "Computer Vision"],
-        link: "/projects/slam-localization"
+        link: "/projects/slam-localization",
+        date: 'Month Year',
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ export const projectsData = [
         description: "Developed 20+ AI avatars using cutting-edge generative models and fine-tuning techniques.",
         icon: "🎨",
         tags: ["PyTorch", "Generative AI", "Fine-tuning"],
-        link: "/projects/generative-ai-avatars"
+        link: "/projects/generative-ai-avatars",
+        date: 'Month Year',
     },
     {
         id: 3,
@@ -24,7 +26,8 @@ export const projectsData = [
         description: "Mastered GPT and LLMs with fine-tuning, RAG, and hybrid approaches for enhanced performance.",
         icon: "💬",
         tags: ["GPT", "RAG", "NLP"],
-        link: "/projects/llm-integration"
+        link: "/projects/llm-integration",
+        date: 'Month Year',
     },
     {
         id: 4,
@@ -33,7 +36,8 @@ export const projectsData = [
         description: "Improved data retrieval efficiency by 15% through optimized vector database implementation.",
         icon: "📊",
         tags: ["Vector DB", "Python", "Optimization"],
-        link: "/projects/vector-db-optimization"
+        link: "/projects/vector-db-optimization",
+        date: 'Month Year',
     },
     {
         id: 5,
@@ -42,7 +46,8 @@ export const projectsData = [
         description: "Built robust data pipelines using SQL, MongoDB, and modern ETL practices.",
         icon: "🗄️",
         tags: ["SQL", "MongoDB", "ETL"],
-        link: "/projects/data-pipeline"
+        link: "/projects/data-pipeline",
+        date: 'Month Year',
     },
     {
         id: 6,
@@ -51,7 +56,8 @@ export const projectsData = [
         description: "Integrated 3+ core features for AI assistant, increasing user interaction by 25% with UX improvements.",
         icon: "⚛️",
         tags: ["TypeScript", "React", "Material UI"],
-        link: "/projects/ai-assistant"
+        link: "/projects/ai-assistant",
+        date: 'Month Year',
     },
     {
         id: 7,
@@ -60,7 +66,8 @@ export const projectsData = [
         description: "Built responsive, performant web applications using React, NextJS, and modern frontend frameworks.",
         icon: "🌐",
         tags: ["React", "NextJS", "TypeScript"],
-        link: "/projects/web-applications"
+        link: "/projects/web-applications",
+        date: 'Month Year',
     },
     {
         id: 8,
@@ -69,7 +76,8 @@ export const projectsData = [
         description: "Implemented and optimized various neural network architectures using PyTorch for specific use cases.",
         icon: "🧠",
         tags: ["PyTorch", "Deep Learning", "Optimization"],
-        link: "/projects/neural-networks"
+        link: "/projects/neural-networks",
+        date: 'Month Year',
     },
     {
         id: 9,
@@ -78,6 +86,7 @@ export const projectsData = [
         description: "Created interactive dashboards for data analysis and insights visualization.",
         icon: "📈",
         tags: ["Python", "Pandas", "Visualization"],
-        link: "/projects/data-visualization"
+        link: "/projects/data-visualization",
+        date: 'Month Year',
     }
 ];
