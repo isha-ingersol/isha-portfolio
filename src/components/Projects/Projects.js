@@ -15,8 +15,8 @@ const Projects = () => {
         setFilteredProjects(filtered);
     }, [activeCategory]);
 
-    const visibleProjects = isExpanded ? filteredProjects : filteredProjects.slice(0, 6);
-    const showMoreButton = filteredProjects.length > 6;
+    const visibleProjects = isExpanded ? filteredProjects : filteredProjects.slice(0, 4);
+    const showMoreButton = filteredProjects.length > 4;
 
     const handleCategoryChange = (category) => {
         setActiveCategory(category);

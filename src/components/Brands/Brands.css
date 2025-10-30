@@ -62,3 +62,18 @@
 .brand-logo:hover .logo-placeholder {
     opacity: 0.8;
 }
+
+@media (max-width: 734px) {
+    .brand-logo {
+        width: 140px;
+        height: 80px;
+    }
+    
+    .logo-placeholder {
+        font-size: 18px;
+    }
+    
+    .brands-track {
+        gap: 40px;
+    }
+}

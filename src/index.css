@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px; /* Accounts for fixed nav */
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #2997ff;
+    outline-offset: 2px;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

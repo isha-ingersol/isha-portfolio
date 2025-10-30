@@ -121,7 +121,11 @@
 
     .timeline-content {
         width: 100%;
-        margin-left: 30px;
+        margin-left: 25px;
+    }
+
+    .timeline-content h3 {
+        font-size: 24px;
     }
 
     .timeline-dot {

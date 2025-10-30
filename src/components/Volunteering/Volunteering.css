@@ -125,3 +125,13 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 734px) {
+    .volunteer-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .volunteer-card {
+        padding: 30px 20px;
+    }
+}

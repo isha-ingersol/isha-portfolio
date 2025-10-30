@@ -1,0 +1,12 @@
+@media (max-width: 734px) {
+    .feature-image-placeholder {
+        height: 300px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-image-placeholder {
+        height: 250px;
+    }
+}
