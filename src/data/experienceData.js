@@ -81,7 +81,7 @@ export const experienceData = [
             "Used TypeScript, JavaScript XML, and Material UI",
             "Participated in bi-weekly product meetings"
         ],
-        skills: ["TypeScript", "React", "Material UI", "JavaScript", "UX Design"]
+        skills: ["React", "JavaScript", "TypeScript", "Material UI", "UX Design"]
     },
     {
         id: 7,
@@ -109,7 +109,7 @@ export const experienceData = [
             "Improved data retrieval efficiency by 15% with vector databases",
             "Mastered GPT and LLMs with fine-tuning, RAG, and hybrid approaches"
         ],
-        skills: ["PyTorch", "Generative AI", "Vector DB", "UI/UX", "GPT"]
+        skills: ["Python", "PyTorch", "Generative AI", "Vector DB", "UI/UX Design", "GPT"]
     },
     {
         id: 9,
@@ -121,6 +121,18 @@ export const experienceData = [
             "X",
         ],
         skills: ["X", "X", "X", "X"]
+    },
+    {
+        id: 10,
+        title: "Student Volunteer",
+        company: "Emirates Red Crescent (ERC)",
+        date: "March 2023",
+        type: "volunteering",
+        achievements: [
+            "Packed over 50 food and aid boxes for Turkey and Syria in collaboration with Global Initiatives and Red Crescent",
+            "Contributed to humanitarian relief efforts supporting communities affected by natural disasters"
+        ],
+        skills: ["Humanitarian Aid", "Disaster Relief", "Volunteering", "Teamwork"]
     },
 ];
 

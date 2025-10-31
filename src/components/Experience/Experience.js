@@ -1,19 +1,13 @@
-// ============================================
-// Experience.js (USING EXTERNAL DATA FILE)
-// Location: src/components/Experience/Experience.js
-// ============================================
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Experience.css';
 import { experienceData } from '../../data/experienceData';
 
 const sortByDateDesc = (data) => {
     return [...data].sort((a, b) => {
         const parseStartDate = (dateStr) => {
-            if (!dateStr || typeof dateStr !== 'string') return new Date(0); // fallback for invalid
-            // Treat "Present" or "Ongoing" as the latest date
+            if (!dateStr || typeof dateStr !== 'string') return new Date(0);
             if (dateStr.toLowerCase().includes('present') || dateStr.toLowerCase().includes('ongoing')) {
-                return new Date(); // today
+                return new Date();
             }
             const [start] = dateStr.split(' - ');
             return new Date(start);
@@ -24,12 +18,26 @@ const sortByDateDesc = (data) => {
 
 const Experience = () => {
     const [activeFilter, setActiveFilter] = useState('all');
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [scrollPosition, setScrollPosition] = useState(0);
 
     const filteredExperiences = sortByDateDesc(
-        activeFilter === 'all' 
-            ? experienceData 
+        activeFilter === 'all'
+            ? experienceData
             : experienceData.filter(exp => exp.type === activeFilter)
     );
+
+    const visibleExperiences = isExpanded ? filteredExperiences : filteredExperiences.slice(0, 3);
+
+    const toggleExpanded = () => {
+        if (!isExpanded) {
+            setScrollPosition(window.scrollY);
+            setIsExpanded(true);
+        } else {
+            setIsExpanded(false);
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+        }
+    };
 
     const getTypeColor = (type) => {
         const colors = {
@@ -49,7 +57,7 @@ const Experience = () => {
         return labels[type] || type;
     };
 
-    // Calculate stats dynamically from data
+    // Stats
     const stats = {
         total: experienceData.length,
         internships: experienceData.filter(exp => exp.type === 'internship').length,
@@ -72,25 +80,25 @@ const Experience = () => {
                 <div className="experience-filters">
                     <button
                         className={`filter-tab ${activeFilter === 'all' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('all')}
+                        onClick={() => { setActiveFilter('all'); setIsExpanded(false); }}
                     >
-                        All Experience
+                        All Experiences
                     </button>
                     <button
                         className={`filter-tab ${activeFilter === 'internship' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('internship')}
+                        onClick={() => { setActiveFilter('internship'); setIsExpanded(false); }}
                     >
                         Internships
                     </button>
                     <button
                         className={`filter-tab ${activeFilter === 'leadership' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('leadership')}
+                        onClick={() => { setActiveFilter('leadership'); setIsExpanded(false); }}
                     >
                         Leadership
                     </button>
                     <button
                         className={`filter-tab ${activeFilter === 'volunteering' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('volunteering')}
+                        onClick={() => { setActiveFilter('volunteering'); setIsExpanded(false); }}
                     >
                         Volunteering
                     </button>
@@ -98,14 +106,13 @@ const Experience = () => {
 
                 {/* Timeline */}
                 <div className="timeline">
-                    {filteredExperiences.map((exp, index) => (
+                    {visibleExperiences.map((exp, index) => (
                         <div 
                             key={exp.id} 
                             className="timeline-item"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="timeline-content">
-                                {/* Type Badge */}
                                 <span 
                                     className="type-badge"
                                     style={{ 
@@ -127,7 +134,6 @@ const Experience = () => {
                                     ))}
                                 </ul>
 
-                                {/* Skills Tags */}
                                 {exp.skills && exp.skills.length > 0 && (
                                     <div className="skills-tags">
                                         {exp.skills.map((skill, idx) => (
@@ -136,15 +142,27 @@ const Experience = () => {
                                     </div>
                                 )}
                             </div>
-                            <div 
-                                className="timeline-dot" 
-                                style={{ background: getTypeColor(exp.type) }}
-                            ></div>
+                            <div className="timeline-dot" style={{ background: getTypeColor(exp.type) }}></div>
                         </div>
                     ))}
                 </div>
 
-                {/* Summary Stats - Dynamic */}
+                {/* Show More / Show Less */}
+                {filteredExperiences.length > 3 && (
+                    <div className="experience-show-more">
+                        <button 
+                            className={`experience-show-more-btn ${isExpanded ? 'expanded' : ''}`}
+                            onClick={toggleExpanded}
+                        >
+                            <span className="toggle-text">
+                                {isExpanded ? 'Show Less' : 'Show More'}
+                            </span>
+                            <span className="toggle-icon">↓</span>
+                        </button>
+                    </div>
+                )}
+
+                {/* Stats */}
                 <div className="experience-stats">
                     <div className="stat-item">
                         <span className="stat-number">{stats.total}+</span>

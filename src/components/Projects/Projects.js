@@ -7,11 +7,33 @@ const Projects = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [filteredProjects, setFilteredProjects] = useState([]);
 
+    const parseDate = (dateString) => {
+        if (!dateString) return new Date(0); // fallback if date missing
+        const [monthPart, year] = dateString.split(' ');
+        const months = [
+            "Jan", "January", "Feb", "February", "Mar", "March", "Apr", "April",
+            "May", "Jun", "June", "Jul", "July", "Aug", "August",
+            "Sep", "September", "Oct", "October", "Nov", "November", "Dec", "December"
+        ];
+        const monthIndex = months.findIndex(m => m.toLowerCase() === monthPart.toLowerCase());
+        const correctedMonth = Math.floor(monthIndex / 2); // each month appears twice in the array
+        return new Date(year, correctedMonth >= 0 ? correctedMonth : 0);
+    };
+
+    const formatFullMonth = (dateString) => {
+        const date = parseDate(dateString);
+        return date.toLocaleString('en-GB', { month: 'long', year: 'numeric' });
+    };
+
     useEffect(() => {
-        const filtered = activeCategory === 'all' 
-            ? projectsData 
+        // Filter first
+        let filtered = activeCategory === 'all' 
+            ? [...projectsData]
             : projectsData.filter(project => project.category === activeCategory);
-        
+
+        // Sort by descending date
+        filtered.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+
         setFilteredProjects(filtered);
     }, [activeCategory]);
 
@@ -26,16 +48,11 @@ const Projects = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
     const toggleExpanded = () => {
         if (!isExpanded) {
-            // Saving scroll position before expanding
             setScrollPosition(window.scrollY);
             setIsExpanded(true);
         } else {
-            // Collapsing, restore scroll
             setIsExpanded(false);
-            window.scrollTo({
-                top: scrollPosition,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
         }
     };
 
@@ -44,10 +61,10 @@ const Projects = () => {
             <div className="feature-content">
                 <div className="feature-eyebrow">Proven Impact</div>
                 <h2 className="feature-headline">
-                    Where creativity<br/>meets precision.
+                    Where creativity<br />meets precision.
                 </h2>
                 <p className="feature-subheadline">Real projects. Real solutions.</p>
-                
+
                 {/* Project Category Tabs */}
                 <div className="project-tabs">
                     <button 
@@ -89,7 +106,11 @@ const Projects = () => {
                                 {project.category.replace('-', '/').toUpperCase()}
                             </span>
                             <h3>{project.title}</h3>
-                            {project.date && <span className="project-date">{project.date}</span>}
+                            {project.date && (
+                                <span className="project-date">
+                                    {formatFullMonth(project.date)}
+                                </span>
+                            )}
                             <p>{project.description}</p>
                             <div className="project-tags">
                                 {project.tags.map((tag, idx) => (
@@ -113,9 +134,9 @@ const Projects = () => {
 
                 {/* Show More/Less Button */}
                 {showMoreButton && (
-                    <div className="show-more-container">
+                    <div className="projects-show-more-container">
                         <button 
-                            className={`show-more-btn ${isExpanded ? 'expanded' : ''}`}
+                            className={`projects-show-more-btn ${isExpanded ? 'expanded' : ''}`}
                             onClick={toggleExpanded}
                         >
                             <span className="toggle-text">

@@ -87,7 +87,7 @@
    ============================================ */
 .timeline {
     position: relative;
-    padding: 40px 0;
+    /* padding: 40px 0; */
 }
 
 .timeline::before {
@@ -257,14 +257,57 @@
 }
 
 /* ============================================
+   EXPERIENCE SHOW MORE BUTTON
+   ============================================ */
+/* .experience-show-more {
+    text-align: center;
+} */
+
+.experience-show-more {
+    text-align: center;
+    margin-top: 0;
+    position: relative;
+    top: -40px;
+}
+
+.experience-show-more-btn {
+    padding: 14px 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: #f5f5f7;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.experience-show-more-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+    font-size: 18px;
+}
+
+.experience-show-more-btn.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* ============================================
    EXPERIENCE STATS
    ============================================ */
 .experience-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
-    margin-top: 80px;
-    padding-top: 60px;
+    margin-top: 5px;
+    padding-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
