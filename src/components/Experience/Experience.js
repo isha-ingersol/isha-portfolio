@@ -5,16 +5,31 @@
 
 import React, { useState } from 'react';
 import './Experience.css';
-
-// Import from external data file
 import { experienceData } from '../../data/experienceData';
+
+const sortByDateDesc = (data) => {
+    return [...data].sort((a, b) => {
+        const parseStartDate = (dateStr) => {
+            if (!dateStr || typeof dateStr !== 'string') return new Date(0); // fallback for invalid
+            // Treat "Present" or "Ongoing" as the latest date
+            if (dateStr.toLowerCase().includes('present') || dateStr.toLowerCase().includes('ongoing')) {
+                return new Date(); // today
+            }
+            const [start] = dateStr.split(' - ');
+            return new Date(start);
+        };
+        return parseStartDate(b.date) - parseStartDate(a.date);
+    });
+};
 
 const Experience = () => {
     const [activeFilter, setActiveFilter] = useState('all');
 
-    const filteredExperiences = activeFilter === 'all' 
-        ? experienceData 
-        : experienceData.filter(exp => exp.type === activeFilter);
+    const filteredExperiences = sortByDateDesc(
+        activeFilter === 'all' 
+            ? experienceData 
+            : experienceData.filter(exp => exp.type === activeFilter)
+    );
 
     const getTypeColor = (type) => {
         const colors = {
@@ -145,7 +160,7 @@ const Experience = () => {
                     </div>
                     <div className="stat-item">
                         <span className="stat-number">{stats.volunteering}</span>
-                        <span className="stat-label">Volunteer Projects</span>
+                        <span className="stat-label">Volunteering Events</span>
                     </div>
                 </div>
             </div>

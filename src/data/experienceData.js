@@ -6,22 +6,19 @@
 export const experienceData = [
     {
         id: 1,
-        title: "AI Engineer Intern",
-        company: "iboothme",
-        date: "April 2024 - June 2024",
+        title: "AI/ML Intern",
+        company: "Alphabot Studio",
+        date: "October 2025 - Present",
         type: "internship", // Type tag
         achievements: [
-            "Developed 20+ AI avatars using generative models",
-            "Boosted user engagement by 10% through enhanced UI",
-            "Improved data retrieval efficiency by 15% with vector databases",
-            "Mastered GPT and LLMs with fine-tuning, RAG, and hybrid approaches"
+            "Ongoing"
         ],
-        skills: ["PyTorch", "Generative AI", "Vector DB", "UI/UX", "GPT"]
+        skills: ["Prompt Engineering", "Nano Banana", "Google AI Studio", "Hugging Face", "APIs"]
     },
     {
         id: 2,
         title: "Computing & Media Teacher",
-        company: "The Blue Coat School",
+        company: "The Blue Coat School Birmingham",
         date: "February 2025 - March 2025",
         type: "volunteering", // Type tag
         achievements: [
@@ -49,15 +46,14 @@ export const experienceData = [
     {
         id: 4,
         title: "Breast Cancer Awareness Volunteer",
-        company: "Community Initiative",
-        date: "October 2024",
+        company: "AIESEC United Arab Emirates",
+        date: "October 2025",
         type: "volunteering", // Type tag
         achievements: [
-            "Contributed to breast cancer awareness campaigns during October 2024",
-            "Engaged with community members to promote early detection and support",
-            "Participated in fundraising and educational events"
+            "Contributed to breast cancer awareness campaigns during Pinktober 2025",
+            "Engaged with community members and attended panel discussions promoting early detection and support",
         ],
-        skills: ["Community Engagement", "Awareness Campaigns", "Event Support", "Public Speaking"]
+        skills: ["Community Engagement", "Awareness Campaigns", "Event Support"]
     },
     {
         id: 5,
@@ -92,7 +88,7 @@ export const experienceData = [
         title: "Partnership Lead",
         company: "Startupscale360 FZCO",
         date: "July 2022 - October 2022",
-        type: "leadership", // Type tag
+        type: "internship", // Type tag
         achievements: [
             "Engaged with 50+ potential sponsors for Entrepreneurship World Cup",
             "Identified and vetted 25+ promising startups",
@@ -100,7 +96,32 @@ export const experienceData = [
             "Reduced meeting time by 25% through efficiency improvements"
         ],
         skills: ["Partnership Development", "Business Strategy", "Presentations", "Networking", "Project Management"]
-    }
+    },
+    {
+        id: 8,
+        title: "Software Engineer Intern",
+        company: "blackNgreen",
+        date: "December 2023 - February 2024",
+        type: "internship", // Type tag
+        achievements: [
+            "Developed 20+ AI avatars using generative models",
+            "Boosted user engagement by 10% through enhanced UI",
+            "Improved data retrieval efficiency by 15% with vector databases",
+            "Mastered GPT and LLMs with fine-tuning, RAG, and hybrid approaches"
+        ],
+        skills: ["PyTorch", "Generative AI", "Vector DB", "UI/UX", "GPT"]
+    },
+    {
+        id: 9,
+        title: "Student Ambassador",
+        company: "University of Birmingham Dubai",
+        date: "X XXXX - X XXXX",
+        type: "leadership", // Type tag
+        achievements: [
+            "X",
+        ],
+        skills: ["X", "X", "X", "X"]
+    },
 ];
 
 // Helper function to get experiences by type
