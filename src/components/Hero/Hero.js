@@ -21,7 +21,8 @@ const Hero = () => {
         <section className="hero">
             <div className="hero-content">
                 <h1>Isha Ingersol.</h1>
-                <p className="subtitle">MEng Computer Science & Software Engineering</p>
+                {/* <p className="subtitle">MEng Computer Science & Software Engineering</p> */}
+                <p className="subtitle">Software Engineer | Data Scientist</p>
                 <p className="tagline">Crafting intelligent solutions. Building the future.</p>
                 <div className="hero-cta">
                     <a href="#projects" className="cta-link">Explore my work</a>
