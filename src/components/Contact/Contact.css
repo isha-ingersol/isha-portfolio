@@ -28,23 +28,33 @@
 }
 
 .contact-links {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
     gap: var(--spacing-lg);
-    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .contact-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-md);
     padding: var(--spacing-lg) 50px;
-    min-width: 200px;
+    min-width: 250px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform var(--transition-fast), background var(--transition-fast);
     text-decoration: none;
     color: inherit;
     display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .contact-card:hover {
@@ -64,9 +74,52 @@
     margin: 0;
 }
 
-@media (max-width: 734px) {
+/* Apple-style elevated primary button for Contact page */
+.contact-resume-btn {
+    display: inline-block;
+    margin-top: var(--spacing-xl);
+    padding: 12px 28px;
+    background-color: var(--color-primary); /* solid accent colour */
+    color: var(--color-black);
+    font-size: var(--font-body);
+    font-weight: 600;
+    line-height: 1.2;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* subtle elevation */
+}
+
+/* Hover effect — subtle lift like Apple buttons */
+.contact-resume-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-primary-hover); /* slightly lighter/darker accent */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Active / pressed state */
+.contact-resume-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* 2x2 grid for medium devices */
+@media (max-width: 1024px) {
     .contact-links {
-        flex-direction: column;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 4x1 grid for small devices */
+@media (max-width: 600px) {
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+
+    /* allow text to wrap gracefully on small screens */
+    .contact-card {
+        white-space: normal;
+        text-overflow: clip;
     }
 }

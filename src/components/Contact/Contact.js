@@ -25,6 +25,15 @@ const Contact = () => {
                         <p>ishaingersol.com</p>
                     </a>
                 </div>
+                <a 
+                    href="/path-to-your-resume.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="contact-resume-btn"
+                >
+                    View Resume
+                </a>
+
             </div>
         </section>
     );
