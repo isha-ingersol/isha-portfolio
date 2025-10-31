@@ -17,6 +17,7 @@ import Brands from './components/Brands/Brands';
 import Gallery from './components/Gallery/Gallery';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import BackToTop from './components/BackToTop/BackToTop';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
       <Contact />
       
       <Footer />
+      <BackToTop />
     </div>
   );
 }
