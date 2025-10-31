@@ -1,5 +1,11 @@
+// ============================================
+// About.js (WITH IMAGE)
+// Location: src/components/About/About.js
+// ============================================
+
 import React from 'react';
 import './About.css';
+import pfp from '../../assets/my-images/pfp.jpg';
 
 const About = () => {
     return (
@@ -13,8 +19,12 @@ const About = () => {
                     full-stack development, and data science. I bring real-world insights and an adaptive, agile 
                     approach to solving complex problems.
                 </p>
-                <div className="feature-image-placeholder">
-                    [Your Professional Photo Here]
+                <div className="feature-image-container">
+                    <img 
+                        src={pfp} 
+                        alt="Isha Ingersol - Professional Portrait" 
+                        className="feature-image"
+                    />
                 </div>
             </div>
         </section>
