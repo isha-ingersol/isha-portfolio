@@ -14,13 +14,13 @@ const Testimonial = () => {
             id: 1,
             quote: "She would be a real asset to any team that has the pleasure of working with her.",
             details: "Her work on improving localization accuracy in traditional SLAM models using a Gated Recurrent Unit in MATLAB was incredible. To say I was impressed is an understatement.",
-            author: "Candice",
-            title: "Judge at AtkinsRéalis Hackafuture"
+            author: "Candice Long",
+            title: "Judge at AtkinsRéalis Hackafuture 2025"
         },
         {
             id: 2,
-            quote: "She is undoubtedly the type of student that has the potential for great success at the university level.",
-            details: "Isha has proved herself as an independent learner with excellent analytical skills. She has a comprehensive understanding of subjects and consistently demonstrates her commitment and intellectual ability. Her natural abilities, combined with her work ethic and ability to evolve academically, are recipes for success in the years to come.",
+            quote: "Her natural abilities, combined with her work ethic and ability to evolve academically, are recipes for success in the years to come.",
+            details: "I have seen in her the desire to change the world in her own way for the better, and she seeks to do so by placing education as her number one priority. She will be a valuable addition to any team or community she joins.",
             author: "Jayakumar Nagasamy",
             title: "Head of the Mathematics Department, JSS International School"
         }

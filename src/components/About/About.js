@@ -5,7 +5,7 @@
 
 import React from 'react';
 import './About.css';
-import pfp from '../../assets/my-images/pfp.jpg';
+import isha from '../../assets/my-images/grad.jpeg';
 
 const About = () => {
     return (
@@ -21,7 +21,7 @@ const About = () => {
                 </p>
                 <div className="feature-image-container">
                     <img 
-                        src={pfp} 
+                        src={isha} 
                         alt="Isha Ingersol - Professional Portrait" 
                         className="feature-image"
                     />

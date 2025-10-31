@@ -31,24 +31,24 @@ function App() {
       
       {/* 3. Projects - What you've built (most important) */}
       <Projects />
-      
-      {/* 4. Skills - What you know */}
-      <Skills />
-      
+
+      {/* 4. Testimonial - Social proof */}
+      <Testimonial />
+
       {/* 5. Experience - Where you've worked/volunteered/led (COMBINED) */}
       <Experience />
       
-      {/* 6. Testimonial - Social proof */}
-      <Testimonial />
-      
-      {/* 7. Awards - Recognition */}
-      <Awards />
-      
-      {/* 8. Brands - Companies you've worked with */}
+      {/* 6. Brands - Companies you've worked with */}
       <Brands />
       
-      {/* 9. Gallery - Visual proof (photos) */}
+      {/* 7. Awards - Recognition */}
+      {/* <Awards /> */}
+
+      {/* 8. Gallery - Visual proof (photos) */}
       <Gallery />
+
+      {/* 9. Skills - What you know */}
+      <Skills />
       
       {/* 10. Contact - Call to action */}
       <Contact />
