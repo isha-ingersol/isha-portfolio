@@ -3,7 +3,7 @@ import './Brands.css';
 
 const Brands = () => {
     const brands = [
-        "American Eagle", "Ulta Beauty", "Ford", "Hublot", "Jotun", "Orebella"
+        "American Eagle", "Ulta Beauty", "Ford", "Hublot", "Jotun", "Orebella", "Caffè Nero"
     ];
 
     return (

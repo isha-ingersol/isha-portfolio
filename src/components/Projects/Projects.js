@@ -1,3 +1,8 @@
+// ============================================
+// Projects.js (FIXED - PDF Opens Correctly)
+// Location: src/components/Projects/Projects.js
+// ============================================
+
 import React, { useState, useEffect } from 'react';
 import { projectsData } from '../../data/projectsData';
 import './Projects.css';
@@ -8,7 +13,7 @@ const Projects = () => {
     const [filteredProjects, setFilteredProjects] = useState([]);
 
     const parseDate = (dateString) => {
-        if (!dateString) return new Date(0); // fallback if date missing
+        if (!dateString) return new Date(0);
         const [monthPart, year] = dateString.split(' ');
         const months = [
             "Jan", "January", "Feb", "February", "Mar", "March", "Apr", "April",
@@ -16,7 +21,7 @@ const Projects = () => {
             "Sep", "September", "Oct", "October", "Nov", "November", "Dec", "December"
         ];
         const monthIndex = months.findIndex(m => m.toLowerCase() === monthPart.toLowerCase());
-        const correctedMonth = Math.floor(monthIndex / 2); // each month appears twice in the array
+        const correctedMonth = Math.floor(monthIndex / 2);
         return new Date(year, correctedMonth >= 0 ? correctedMonth : 0);
     };
 
@@ -26,14 +31,11 @@ const Projects = () => {
     };
 
     useEffect(() => {
-        // Filter first
         let filtered = activeCategory === 'all' 
             ? [...projectsData]
             : projectsData.filter(project => project.category === activeCategory);
 
-        // Sort by descending date
         filtered.sort((a, b) => parseDate(b.date) - parseDate(a.date));
-
         setFilteredProjects(filtered);
     }, [activeCategory]);
 
@@ -54,6 +56,16 @@ const Projects = () => {
             setIsExpanded(false);
             window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
         }
+    };
+
+    // FIXED: Handle project link - prevent default for files
+    const handleProjectClick = (e, project) => {
+        if (project.link && project.linkType === 'file') {
+            e.preventDefault(); // Prevent navigation
+            e.stopPropagation(); // Stop event bubbling
+            window.open(project.link, '_blank'); // Open PDF in new tab
+        }
+        // For external links (linkType: 'external'), let the <a> tag handle it naturally
     };
 
     return (
@@ -124,6 +136,7 @@ const Projects = () => {
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="view-project-btn"
+                                    onClick={(e) => handleProjectClick(e, project)}
                                 >
                                     View Project
                                 </a>

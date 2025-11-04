@@ -1,5 +1,5 @@
 /* ============================================
-   Projects.css 
+   Projects.css (WITH ORIGINAL BUTTON STYLE)
    Location: src/components/Projects/Projects.css
    ============================================ */
 
@@ -123,6 +123,8 @@
     opacity: 0;
     transform: translateY(30px);
     animation: fadeInUp 0.6s ease forwards;
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes fadeInUp {
@@ -190,7 +192,7 @@
 .project-category {
     display: inline-block;
     padding: 6px 14px;
-    background: rgba(41, 151, 255, 0.15);
+    /* background: rgba(41, 151, 255, 0.15); */
     color: #2997ff;
     border-radius: 20px;
     font-size: 12px;
@@ -200,19 +202,31 @@
     letter-spacing: 0.05em;
 }
 
+/* Project Date */
+.project-date {
+    font-size: 13px;
+    font-weight: 500;
+    color: #86868b;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Project Description */
 .project-card p {
     font-size: 15px;
     line-height: 1.6;
     color: #a1a1a6;
     margin-bottom: 20px;
+    flex-grow: 1;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    justify-content: center; /* centre the tags */
-    margin-top: 10px;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 15px;
 }
 
 .project-tag {
@@ -222,6 +236,27 @@
     border-radius: 12px;
     font-size: 12px;
     font-weight: 500;
+}
+
+/* View Project Button - ORIGINAL STYLE (Works for PDFs too!) */
+.view-project-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2997ff;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.view-project-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    transform: translateY(-2px);
 }
 
 /* Show More Button */
@@ -259,50 +294,30 @@
     transform: rotate(180deg);
 }
 
-/* Project Date - subtle, light text */
-.project-date {
-    font-size: 13px;
-    font-weight: 500;
-    color: #86868b; /* matches other secondary text */
-    margin-bottom: 15px;
-    display: block;
-}
-
-/* View Project Button - minimal Apple-style */
-.view-project-btn {
-    display: inline-block;
-    padding: 10px 24px;
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #2997ff; /* matches project category accent */
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s ease;
-}
-
-.view-project-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    transform: translateY(-2px);
-}
-
-/* Responsive */
+/* Responsive - Tablet */
 @media (max-width: 1068px) {
     .feature-headline {
         font-size: 48px;
     }
 
+    .feature-subheadline {
+        font-size: 24px;
+    }
+
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
+/* Responsive - Mobile */
 @media (max-width: 734px) {
+    .feature-section {
+        padding: 80px 20px;
+    }
+
     .feature-headline {
         font-size: 36px;
+        line-height: 1.1;
     }
 
     .feature-subheadline {
@@ -311,5 +326,50 @@
 
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-card {
+        padding: 30px 25px;
+    }
+
+    .project-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .project-card h3 {
+        font-size: 21px;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    .view-project-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .projects-show-more-btn {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .feature-headline {
+        font-size: 32px;
+    }
+
+    .project-card h3 {
+        font-size: 19px;
+    }
+
+    .project-card {
+        padding: 25px 20px;
     }
 }

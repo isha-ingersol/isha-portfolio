@@ -1,36 +1,23 @@
+import SLAMPDF from '../assets/project-files/CarbonSmart.pdf';
+import CarbonSmartPDF from '../assets/project-files/CarbonSmart.pdf';
+import WearYourConfidencePDF from '../assets/project-files/WearYourConfidence.pdf';
+import PetMatePDF from '../assets/project-files/PetMate.pdf';
+import DyscoverAIPDF from '../assets/project-files/DyscoverAI.pdf';
+
 export const projectsData = [
     {
         id: 1,
         title: "SLAM Localization Model",
         category: "ai-ml",
-        description: "Improved localization accuracy in traditional SLAM models using Gated Recurrent Unit (GRU) networks in MATLAB.",
+        description: "Improved localization accuracy in traditional SLAM models using Gated Recurrent Unit (GRU) networks in MATLAB by 64%.",
         icon: "🤖",
         tags: ["MATLAB", "GRU", "Computer Vision"],
-        link: "/projects/slam-localization",
-        date: 'Month Year',
+        link: SLAMPDF,
+        linkType: "file",
+        date: 'February 2025',
     },
     {
         id: 2,
-        title: "Vector Database Optimization",
-        category: "data-science",
-        description: "Improved data retrieval efficiency by 15% through optimized vector database implementation.",
-        icon: "📊",
-        tags: ["Vector DB", "Python", "Optimization"],
-        link: "/projects/vector-db-optimization",
-        date: 'Month Year',
-    },
-    {
-        id: 3,
-        title: "Modern Web Applications",
-        category: "full-stack",
-        description: "Built responsive, performant web applications using React, NextJS, and modern frontend frameworks.",
-        icon: "🌐",
-        tags: ["React", "NextJS", "TypeScript"],
-        link: "/projects/web-applications",
-        date: 'Month Year',
-    },
-    {
-        id: 4,
         title: "Carbon Smart",
         category: "full-stack",
         description: "A smartphone application to track and reduce personal carbon footprints with real-time monitoring, public transport suggestions, and sustainable shopping assistance.",
@@ -45,11 +32,12 @@ export const projectsData = [
             "Mobile App Development",
             "Sustainability"
         ],
-        link: "/projects/carbon-smart",
+        link: CarbonSmartPDF,
+        linkType: "file",
         date: 'April 2024',
     },
     {
-        id: 5,
+        id: 3,
         title: "Wear Your Confidence",
         category: "full-stack",
         description: "Innovative smart clothing solution to improve posture and empower overall well-being using Smart Vests, Insoles, Adaptive Clothing, and Smart Mirrors.",
@@ -65,12 +53,13 @@ export const projectsData = [
             "Wearable Technology",
             "Internet of Things (IoT)"
         ],
-        link: "/projects/wear-your-confidence",
+        link: WearYourConfidencePDF,
+        linkType: "file",
         date: 'April 2024',
     },
     {
-        id: 6,
-        title: "PetMate Web Application",
+        id: 4,
+        title: "PetMate",
         category: "full-stack",
         description: "A web platform connecting pet-owners with reliable pet-sitters, providing a safe and convenient service for both parties.",
         icon: "🐾",
@@ -86,7 +75,19 @@ export const projectsData = [
             "Software Engineering",
             "Web Development"
         ],
-        link: "/projects/petmate-web-application",
+        link: PetMatePDF,
+        linkType: "file",
         date: 'May 2023',
-    }
+    },
+    {
+        id: 5,
+        title: "DyscoverAI",
+        category: "ai-ml",
+        description: "A full-stack system with deep learning models to detect learning disabilities in children and young adults using handwriting analysis.",
+        icon: "🧠",
+        tags: ["Python", "Handwriting Image Analysis", "Neural Networks", "TensorFlow", "Keras", "MobileNetV2", "REST API", "Docker", "React", "Vite", "Flask", "AWS EC2", "Grad-CAM", "UI/UX"],
+        link: DyscoverAIPDF,
+        linkType: "file",
+        date: 'April 2025',
+    },
 ];
