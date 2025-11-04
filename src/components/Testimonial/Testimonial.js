@@ -41,7 +41,7 @@ const Testimonial = () => {
     const currentTestimonial = testimonials[activeIndex];
 
     return (
-        <section className="testimonial-section">
+        <section className="testimonial-section" id="testimonials">
             <div className="testimonial-container">
                 <div className="testimonial-content" key={activeIndex}>
                     <div className="quote-icon">"</div>
