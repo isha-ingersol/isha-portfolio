@@ -123,7 +123,7 @@ const Gallery = () => {
             {/* Gallery Grid */}
             <div className="gallery-grid" ref={gridRef}>
                 {visibleGallery.map(item => (
-                    <div className="gallery-item" key={item.title}>
+                    <div className="gallery-item" key={item.id}>
                         {/* Image */}
                         <div className="gallery-image">
                             {item.image ? (
