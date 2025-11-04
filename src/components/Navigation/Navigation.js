@@ -43,7 +43,7 @@ const Navigation = () => {
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    {/* <li><a href="#skills">Skills</a></li> */}
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -52,7 +52,7 @@ const Navigation = () => {
                 <a href="#projects" onClick={closeMobileMenu}>Projects</a>
                 <a href="#experience" onClick={closeMobileMenu}>Experience</a>
                 <a href="#gallery" onClick={closeMobileMenu}>Gallery</a>
-                <a href="#skills" onClick={closeMobileMenu}>Skills</a>
+                {/* <a href="#skills" onClick={closeMobileMenu}>Skills</a> */}
                 <a href="#contact" onClick={closeMobileMenu}>Contact</a>
             </div>
         </nav>

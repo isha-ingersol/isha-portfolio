@@ -49,7 +49,7 @@ function App() {
       <Gallery />
 
       {/* 9. Skills - What you know */}
-      <Skills />
+      {/* <Skills /> */}
       
       {/* 10. Contact - Call to action */}
       <Contact />

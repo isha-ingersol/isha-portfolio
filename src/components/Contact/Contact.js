@@ -20,20 +20,21 @@ const Contact = () => {
                         <h3>GitHub</h3>
                         <p>isha-ingersol</p>
                     </a>
-                    <a href="https://ishaingersol.com" target="_blank" rel="noopener noreferrer" className="contact-card">
+                    {/* <a href="https://ishaingersol.com" target="_blank" rel="noopener noreferrer" className="contact-card">
                         <h3>Portfolio</h3>
                         <p>ishaingersol.com</p>
-                    </a>
+                    </a> */}
                 </div>
-                <a 
+
+                {/* Resume */}
+                {/* <a 
                     href="/path-to-your-resume.pdf" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="contact-resume-btn"
                 >
                     View Resume
-                </a>
-
+                </a> */}
             </div>
         </section>
     );

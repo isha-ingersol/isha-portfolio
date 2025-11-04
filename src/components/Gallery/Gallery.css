@@ -1,3 +1,6 @@
+/* ------------------------------ */
+/* Gallery Section and Header */
+/* ------------------------------ */
 .gallery-section {
     background: var(--color-bg-light);
     padding: var(--spacing-3xl) 20px;
@@ -23,6 +26,9 @@
     color: var(--color-text-gray);
 }
 
+/* ------------------------------ */
+/* Category Tabs */
+/* ------------------------------ */
 .gallery-tabs {
     display: flex;
     justify-content: center;
@@ -53,14 +59,33 @@
     border-color: var(--color-text-dark);
 }
 
+/* ------------------------------ */
+/* Gallery Grid Layout */
+/* ------------------------------ */
 .gallery-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 2 rows x 3 columns */
 }
 
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* Tablet: 2x2 */
+    }
+}
+
+@media (max-width: 734px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* Mobile & smaller: 1 column */
+        gap: 15px;
+    }
+}
+
+/* ------------------------------ */
+/* Gallery Card Item */
+/* ------------------------------ */
 .gallery-item {
     border-radius: var(--radius-md);
     overflow: hidden;
@@ -68,12 +93,17 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transition: transform var(--transition-fast), opacity var(--transition-fast);
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery-item:hover {
     transform: scale(1.02);
 }
 
+/* ------------------------------ */
+/* Image inside Card */
+/* ------------------------------ */
 .gallery-image {
     width: 100%;
     height: 280px;
@@ -84,8 +114,17 @@
     font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Different gradient backgrounds */
 .gallery-item:nth-child(2n) .gallery-image {
     background: var(--gradient-pink);
 }
@@ -98,15 +137,50 @@
     background: var(--gradient-green);
 }
 
+/* ------------------------------ */
+/* Company Name */
+/* ------------------------------ */
+.gallery-company {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: rgb(94, 94, 102);
+    margin: 10px 0 0 0;
+    text-align: center;
+}
+
+/* ------------------------------ */
+/* Certificate / Item Title */
+/* ------------------------------ */
 .gallery-caption {
-    padding: 20px;
+    padding: 5px 10px;
     font-size: var(--font-body-small);
     font-weight: 500;
     color: var(--color-text-dark);
     text-align: center;
+    word-break: break-word; /* prevent overflow for long titles */
+    flex-shrink: 0;
 }
 
-/* Show More Button - same style as Projects */
+/* ------------------------------ */
+/* Date */
+/* ------------------------------ */
+.gallery-date {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #86868b;
+    /* margin: 10px 0 10px 0; */
+    text-align: center;
+    /* flex-shrink: 0; */
+
+    margin-top: auto;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------ */
+/* Show More Button */
+/* ------------------------------ */
 .gallery-show-more-container {
     text-align: center;
     margin-top: 40px;
@@ -141,22 +215,10 @@
     transform: rotate(180deg);
 }
 
-/* Gallery Date */
-.gallery-date {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    color: #86868b; /* same as projects secondary text */
-    margin: 20px 0 0px 0; /* spacing below image and above caption */
-    text-align: center;
-}
-
+/* ------------------------------ */
+/* Responsive Adjustments for Image */
+/* ------------------------------ */
 @media (max-width: 734px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-    
     .gallery-image {
         height: 220px;
     }

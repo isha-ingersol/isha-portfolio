@@ -7,13 +7,15 @@ export const experienceData = [
     {
         id: 1,
         title: "AI/ML Intern",
-        company: "Alphabot Studio",
-        date: "October 2025 - Present",
-        type: "internship", // Type tag
+        company: "Alphabot Studio (in partnership with iboothme)",
+        date: "October 2025 – Present",
+        type: "internship",
         achievements: [
-            "Ongoing"
+            "Engineered AI-generating prompt systems used in brand-led live events for partners including Hublot, American Eagle, Ford, and Ulta Beauty",
+            "Refined image-conditioning pipelines to showcase client products in real-time during consumer-facing experiences",
+            "Collaborated with external AI and event-tech teams to deliver scalable multimodal systems aligned with evolving campaign needs"
         ],
-        skills: ["Prompt Engineering", "Nano Banana", "Google AI Studio", "Hugging Face", "APIs"]
+        skills: ["Prompt Engineering", "Generative AI", "Nano Banana", "Hugging Face", "Google AI Studio", "API Integration"]
     },
     {
         id: 2,
@@ -58,7 +60,7 @@ export const experienceData = [
     {
         id: 5,
         title: "Digital Marketing Intern",
-        company: "Girls in Marketing",
+        company: "Girls in Marketing (in partnership with Code First Girls)",
         date: "August 2023 - September 2023",
         type: "internship", // Type tag
         achievements: [
@@ -115,12 +117,15 @@ export const experienceData = [
         id: 9,
         title: "Student Ambassador",
         company: "University of Birmingham Dubai",
-        date: "X XXXX - X XXXX",
-        type: "leadership", // Type tag
+        date: "Sep 2022 - Oct 2023",
+        type: "leadership",
         achievements: [
-            "X",
+            "Accomplished a seamless transition for 50+ students during welcome week",
+            "Assisted 20+ prospective students with their applications, leveraging my experience to help them make informed decisions"
         ],
-        skills: ["X", "X", "X", "X"]
+        skills: [
+            "Leadership", "Mentoring","Event Coordination","Public Speaking","Student Engagement","Communication"
+        ]
     },
     {
         id: 10,

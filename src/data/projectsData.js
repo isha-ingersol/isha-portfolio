@@ -1,4 +1,4 @@
-import SLAMPDF from '../assets/project-files/CarbonSmart.pdf';
+import SLAMPDF from '../assets/project-files/Robotics in Nuclear Operations.pdf';
 import CarbonSmartPDF from '../assets/project-files/CarbonSmart.pdf';
 import WearYourConfidencePDF from '../assets/project-files/WearYourConfidence.pdf';
 import PetMatePDF from '../assets/project-files/PetMate.pdf';
@@ -67,6 +67,7 @@ export const projectsData = [
             "CSS",
             "JavaScript",
             "Java",
+            "SQL",
             "HTML",
             "Angular",
             "Agile Project Management",
@@ -85,7 +86,22 @@ export const projectsData = [
         category: "ai-ml",
         description: "A full-stack system with deep learning models to detect learning disabilities in children and young adults using handwriting analysis.",
         icon: "🧠",
-        tags: ["Python", "Handwriting Image Analysis", "Neural Networks", "TensorFlow", "Keras", "MobileNetV2", "REST API", "Docker", "React", "Vite", "Flask", "AWS EC2", "Grad-CAM", "UI/UX"],
+        tags: [
+            "Python", 
+            "Handwriting Image Analysis", 
+            "Machine Learning",
+            "Neural Networks", 
+            "TensorFlow", 
+            "Keras", 
+            "MobileNetV2", 
+            "REST API", 
+            "Docker", 
+            "React", 
+            "Vite", 
+            "Flask", 
+            "AWS EC2",
+            "Grad-CAM", 
+            "UI/UX"],
         link: DyscoverAIPDF,
         linkType: "file",
         date: 'April 2025',
