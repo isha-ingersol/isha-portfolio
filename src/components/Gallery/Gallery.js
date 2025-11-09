@@ -97,7 +97,13 @@ const Gallery = () => {
         }
     };
 
-    const categories = ['all', 'certificates', 'presentations', 'volunteering', 'events'];
+    const categories = [
+        'all', 
+        'certificates', 
+        'presentations', 
+        'volunteering', 
+        // 'events'
+    ];
 
     return (
         <section id="gallery" className="gallery-section">

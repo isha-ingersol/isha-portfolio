@@ -139,6 +139,20 @@ export const experienceData = [
         ],
         skills: ["Humanitarian Aid", "Disaster Relief", "Volunteering", "Teamwork"]
     },
+    {
+        id: 11,
+        title: "Interviewer for The Times Final Year Student Survey",
+        company: "High Fliers Research Limited",
+        date: "January 2025 - February 2025",
+        type: "volunteering",
+        achievements: [
+            "Conducted structured interviews for The Times Final Year Student Survey 2025 at the University of Birmingham",
+            "Collected quantitative data on graduate career intentions in line with national research standards",
+            "Maintained response consistency and accuracy through careful adherence to survey protocols",
+            "Collaborated with regional coordinators to support reliable and representative data sampling"
+        ],
+        skills: ["Data Analysis","Data Collection", "Survey Research", "Communication", "Analytical Thinking", "Attention to Detail"]
+    },
 ];
 
 // Helper function to get experiences by type
