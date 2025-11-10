@@ -1,5 +1,5 @@
 // ============================================
-// Testimonial.js (WITH CAROUSEL)
+// Testimonial.js (Apple-inspired Design)
 // Location: src/components/Testimonial/Testimonial.js
 // ============================================
 
@@ -43,48 +43,65 @@ const Testimonial = () => {
     return (
         <section className="testimonial-section" id="testimonials">
             <div className="testimonial-container">
-                <div className="testimonial-content" key={activeIndex}>
-                    <div className="quote-icon">"</div>
-                    <h2 className="testimonial-quote">
-                        {currentTestimonial.quote}
-                    </h2>
-                    <p className="testimonial-details">
-                        {currentTestimonial.details}
-                    </p>
-                    <div className="testimonial-author">
-                        <div className="author-info">
-                            <p className="author-name">{currentTestimonial.author}</p>
-                            <p className="author-title">{currentTestimonial.title}</p>
+                <div className="section-header">
+                    <h2 className="section-eyebrow">Testimonials</h2>
+                    <h3 className="section-title">What people say.</h3>
+                </div>
+                
+                <div className="testimonial-carousel">
+                    <div className="testimonial-card" key={activeIndex}>
+                        <div className="card-content">
+                            <div className="quote-mark">❝</div>
+                            <blockquote className="testimonial-quote">
+                                {currentTestimonial.quote}
+                            </blockquote>
+                            <p className="testimonial-details">
+                                {currentTestimonial.details}
+                            </p>
+                            <div className="testimonial-author">
+                                <div className="author-avatar">
+                                    {currentTestimonial.author.split(' ').map(n => n[0]).join('')}
+                                </div>
+                                <div className="author-info">
+                                    <p className="author-name">{currentTestimonial.author}</p>
+                                    <p className="author-title">{currentTestimonial.title}</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     {/* Navigation */}
                     {testimonials.length > 1 && (
-                        <div className="testimonial-nav">
+                        <div className="testimonial-controls">
                             <button 
-                                className="nav-arrow" 
+                                className="control-btn prev-btn" 
                                 onClick={prevTestimonial}
                                 aria-label="Previous testimonial"
                             >
-                                ‹
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
                             </button>
                             
-                            <div className="testimonial-dots">
+                            <div className="testimonial-indicators">
                                 {testimonials.map((_, index) => (
-                                    <span
+                                    <button
                                         key={index}
-                                        className={`dot ${index === activeIndex ? 'active' : ''}`}
+                                        className={`indicator ${index === activeIndex ? 'active' : ''}`}
                                         onClick={() => goToTestimonial(index)}
+                                        aria-label={`Go to testimonial ${index + 1}`}
                                     />
                                 ))}
                             </div>
 
                             <button 
-                                className="nav-arrow" 
+                                className="control-btn next-btn" 
                                 onClick={nextTestimonial}
                                 aria-label="Next testimonial"
                             >
-                                ›
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                </svg>
                             </button>
                         </div>
                     )}
