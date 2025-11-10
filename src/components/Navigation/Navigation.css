@@ -46,12 +46,13 @@ nav.scrolled {
     opacity: 1;
 }
 
-.logo {
+.logo a {
     font-size: 21px;
     font-weight: 600;
     color: #1d1d1f;
     letter-spacing: -0.02em;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .mobile-menu-btn {

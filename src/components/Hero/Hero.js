@@ -40,7 +40,7 @@ const Hero = () => {
     };
 
     return (
-        <div className="hero-container">
+        <div id="home" className="hero-container">
             {/* Animated gradient orbs */}
             <div className="gradient-orb orb-1" style={parallaxOrb1}></div>
             <div className="gradient-orb orb-2" style={parallaxOrb2}></div>
@@ -65,10 +65,7 @@ const Hero = () => {
                     </div>
                     
                     <h1 className="hero-title">
-                        <span className="title-line">Isha</span>
-                        <span className="title-line">Ingersol
-                            {/* <span className="title-dot">.</span>     */}
-                        </span>
+                        <span className="title-line">Isha Ingersol</span>
                     </h1>
                     
                     <div className="hero-subtitle-wrapper">
@@ -116,7 +113,15 @@ const Hero = () => {
                     </div> */}
                     
                     <div className="hero-cta">
-                        <a href="#projects" className="cta-link primary">
+                        <a 
+                            href="/resume.pdf" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="cta-link primary"
+                        >
+                            <span>Resume</span>
+                        </a>
+                        <a href="#projects" className="cta-link secondary">
                             <span>Explore my work</span>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

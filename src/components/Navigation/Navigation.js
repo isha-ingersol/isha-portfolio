@@ -30,7 +30,7 @@ const Navigation = () => {
     return (
         <nav className={scrolled ? 'scrolled' : ''}>
             <div className="nav-content">
-                <div className="logo">Isha</div>
+                <div className="logo"><a href="#home">Isha</a></div>
                 <button 
                     className="mobile-menu-btn" 
                     onClick={toggleMobileMenu}
