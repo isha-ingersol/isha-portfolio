@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a1c5db00.css",
-    "main.js": "/static/js/main.95ec18c4.js",
+    "main.js": "/static/js/main.9c2bb715.js",
     "static/media/DyscoverAI.pdf": "/static/media/DyscoverAI.8cf7d3e87c4123f0c7fd.pdf",
     "static/media/WearYourConfidence.pdf": "/static/media/WearYourConfidence.4ad1484e79e0b486ce3a.pdf",
     "static/media/10DS - Rewire The State Hackathon.jpg": "/static/media/10DS - Rewire The State Hackathon.da983fa107cdb93cb22b.jpg",
@@ -40,10 +40,10 @@
     "static/media/kaggle - Python.jpg": "/static/media/kaggle - Python.4c65768a179341f33b27.jpg",
     "index.html": "/index.html",
     "main.a1c5db00.css.map": "/static/css/main.a1c5db00.css.map",
-    "main.95ec18c4.js.map": "/static/js/main.95ec18c4.js.map"
+    "main.9c2bb715.js.map": "/static/js/main.9c2bb715.js.map"
   },
   "entrypoints": [
     "static/css/main.a1c5db00.css",
-    "static/js/main.95ec18c4.js"
+    "static/js/main.9c2bb715.js"
   ]
 }
