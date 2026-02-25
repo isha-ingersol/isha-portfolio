@@ -78,10 +78,9 @@ export const experienceData = [
         date: "July 2023 - February 2024",
         type: "internship",
         achievements: [
-            "Integrated 3+ core features for AI assistant, improving UX and boosting engagement by 25%",
-            "Developed 20+ AI avatars using generative models, enhancing UI by 10%",
-            "Improved data retrieval efficiency by 15% using vector databases",
-            "Prototyped fine-tuning, RAG, and hybrid LLM approaches"
+            "Built an AI multi-persona chatbot frontend in TypeScript and Material UI (auth, chat, voice I/O, etc)",
+            "Prototyped fine-tuning, RAG, and hybrid optimisation strategies using Hugging Face",
+            "Explored multimodal image search using vector databases and embeddings",
         ],
         skills: ["React", "TypeScript", "JavaScript", "Material UI", "Python", "PyTorch", "Generative AI", "Vector DB", "GPT", "UX Design"]
     },
