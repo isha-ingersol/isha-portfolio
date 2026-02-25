@@ -13,7 +13,7 @@ const About = () => {
             <div className="feature-content">
                 <div className="feature-eyebrow">First Class Honours</div>
                 <h2 className="feature-headline">More than just code.<br/>It's innovation.</h2>
-                <p className="feature-subheadline">1+ years of internship experience. Limitless possibilities.</p>
+                <p className="feature-subheadline">15 months of internship experience. Limitless possibilities.</p>
                 <p className="feature-description">
                     A passionate MEng Computer Science and Software Engineering graduate with proven expertise in AI, 
                     data science, and full-stack development. I bring real-world insights and an adaptive, agile 

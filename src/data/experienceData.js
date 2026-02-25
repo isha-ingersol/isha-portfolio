@@ -7,7 +7,7 @@ export const experienceData = [
     {
         id: 1,
         title: "AI/ML Intern",
-        company: "Alphabot Studio (in partnership with iboothme)",
+        company: "Aikyam Technologies",
         date: "October 2025 – Present",
         type: "internship",
         achievements: [
@@ -22,7 +22,7 @@ export const experienceData = [
         title: "Computing & Media Teacher",
         company: "The Blue Coat School Birmingham",
         date: "February 2025 - March 2025",
-        type: "volunteering", // Type tag
+        type: "volunteering",
         achievements: [
             "Co-led 8 creative coding workshops for Years 1–6 using Scratch and game-based learning",
             "Reduced project timelines by 33% through streamlined digital workflows",
@@ -36,7 +36,7 @@ export const experienceData = [
         title: "Marketing Student Ambassador",
         company: "University of Birmingham Dubai",
         date: "June 2023 - February 2025",
-        type: "leadership", // Type tag
+        type: "leadership",
         achievements: [
             "Created 40+ compelling social media posts",
             "Extended University's digital reach through strategic content",
@@ -50,7 +50,7 @@ export const experienceData = [
         title: "Breast Cancer Awareness Volunteer",
         company: "AIESEC United Arab Emirates",
         date: "October 2025",
-        type: "volunteering", // Type tag
+        type: "volunteering",
         achievements: [
             "Contributed to breast cancer awareness campaigns during Pinktober 2025",
             "Engaged with community members and attended panel discussions promoting early detection and support",
@@ -62,7 +62,7 @@ export const experienceData = [
         title: "Digital Marketing Intern",
         company: "Girls in Marketing (in partnership with Code First Girls)",
         date: "August 2023 - September 2023",
-        type: "internship", // Type tag
+        type: "internship",
         achievements: [
             "Completed comprehensive programme with industry experts",
             "Developed SEO strategies to increase organic traffic by 20%",
@@ -75,22 +75,22 @@ export const experienceData = [
         id: 6,
         title: "Software Engineer Intern",
         company: "blackNgreen",
-        date: "July 2023 - September 2023",
-        type: "internship", // Type tag
+        date: "July 2023 - February 2024",
+        type: "internship",
         achievements: [
-            "Integrated 3+ core features for AI assistant",
-            "Increased user interaction by 25% with UX improvements",
-            "Used TypeScript, JavaScript XML, and Material UI",
-            "Participated in bi-weekly product meetings"
+            "Integrated 3+ core features for AI assistant, improving UX and boosting engagement by 25%",
+            "Developed 20+ AI avatars using generative models, enhancing UI by 10%",
+            "Improved data retrieval efficiency by 15% using vector databases",
+            "Prototyped fine-tuning, RAG, and hybrid LLM approaches"
         ],
-        skills: ["React", "JavaScript", "TypeScript", "Material UI", "UX Design"]
+        skills: ["React", "TypeScript", "JavaScript", "Material UI", "Python", "PyTorch", "Generative AI", "Vector DB", "GPT", "UX Design"]
     },
     {
         id: 7,
         title: "Partnership Lead",
         company: "Startupscale360 FZCO",
         date: "July 2022 - October 2022",
-        type: "internship", // Type tag
+        type: "internship",
         achievements: [
             "Engaged with 50+ potential sponsors for Entrepreneurship World Cup",
             "Identified and vetted 25+ promising startups",
@@ -99,20 +99,20 @@ export const experienceData = [
         ],
         skills: ["Partnership Development", "Business Strategy", "Presentations", "Networking", "Project Management"]
     },
-    {
-        id: 8,
-        title: "Software Engineer Intern",
-        company: "blackNgreen",
-        date: "December 2023 - February 2024",
-        type: "internship", // Type tag
-        achievements: [
-            "Developed 20+ AI avatars using generative models",
-            "Boosted user engagement by 10% through enhanced UI",
-            "Improved data retrieval efficiency by 15% with vector databases",
-            "Mastered GPT and LLMs with fine-tuning, RAG, and hybrid approaches"
-        ],
-        skills: ["Python", "PyTorch", "Generative AI", "Vector DB", "UI/UX Design", "GPT"]
-    },
+    // {
+    //     id: 8,
+    //     title: "Software Engineer Intern",
+    //     company: "blackNgreen",
+    //     date: "December 2023 - February 2024",
+    //     type: "internship",
+    //     achievements: [
+    //         "Developed 20+ AI avatars using generative models",
+    //         "Boosted user engagement by 10% through enhanced UI",
+    //         "Improved data retrieval efficiency by 15% with vector databases",
+    //         "Mastered GPT and LLMs with fine-tuning, RAG, and hybrid approaches"
+    //     ],
+    //     skills: ["Python", "PyTorch", "Generative AI", "Vector DB", "UI/UX Design", "GPT"]
+    // },
     {
         id: 9,
         title: "Student Ambassador",
@@ -144,7 +144,7 @@ export const experienceData = [
         title: "Interviewer for The Times Final Year Student Survey",
         company: "High Fliers Research Limited",
         date: "January 2025 - February 2025",
-        type: "volunteering",
+        type: "internship",
         achievements: [
             "Conducted structured interviews for The Times Final Year Student Survey 2025 at the University of Birmingham",
             "Collected quantitative data on graduate career intentions in line with national research standards",
@@ -152,6 +152,31 @@ export const experienceData = [
             "Collaborated with regional coordinators to support reliable and representative data sampling"
         ],
         skills: ["Data Analysis","Data Collection", "Survey Research", "Communication", "Analytical Thinking", "Attention to Detail"]
+    },
+    {
+        id: 12,
+        title: "Kidspreneur Season 3 Volunteer",
+        company: "AIESEC United Arab Emirates",
+        date: "November 2025",
+        type: "volunteering",
+        achievements: [
+            "Assisted in delivering a full day youth entrepreneurship event, ensuring smooth programme flow",
+            "Provided participant support and floor coordination across panel talks, competitions, and interactive sessions",
+        ],
+        skills: ["Event Operations", "On-site Coordination", "Youth Engagement"]
+    },
+    {
+        id: 13,
+        title: "Volunteer",
+        company: "Thrift For Good",
+        date: "January 2026 - Present",
+        type: "volunteering",
+        achievements: [
+            "Processed and priced 700+ donated items across retail and outreach operations",
+            "Managed POS transactions and customer accounts, handling purchases up to AED 600+",
+            "Contributed 35+ volunteer hours to stock intake, merchandising, and labour camp distribution",
+        ],
+        skills: ["Retail Operations", "Inventory Processing", "Point of Sale Systems", "Visual Merchandising"]
     },
 ];
 
