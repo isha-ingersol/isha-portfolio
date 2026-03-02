@@ -4,14 +4,27 @@ import { experienceData } from '../../data/experienceData';
 
 const sortByDateDesc = (data) => {
     return [...data].sort((a, b) => {
+
         const parseStartDate = (dateStr) => {
             if (!dateStr || typeof dateStr !== 'string') return new Date(0);
-            if (dateStr.toLowerCase().includes('present') || dateStr.toLowerCase().includes('ongoing')) {
+
+            // Normalise any dash variant
+            const normalised = dateStr.replace(/–/g, '-');
+
+            if (normalised.toLowerCase().includes('present') || 
+                normalised.toLowerCase().includes('current') ||
+                normalised.toLowerCase().includes('ongoing')) {
                 return new Date();
             }
-            const [start] = dateStr.split(' - ');
-            return new Date(start);
+
+            if (normalised.includes(' - ')) {
+                const [start] = normalised.split(' - ');
+                return new Date(start.trim());
+            }
+
+            return new Date(normalised.trim());
         };
+
         return parseStartDate(b.date) - parseStartDate(a.date);
     });
 };
